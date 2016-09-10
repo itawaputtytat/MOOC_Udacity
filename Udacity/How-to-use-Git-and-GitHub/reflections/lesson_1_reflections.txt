@@ -1,0 +1,89 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    diff quickly shows me differences in two documents in relevant lines
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    Fill in your answer here
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Fill in your answer here
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Fill in your answer here
+
+How can you use the commands git log and git diff to view the history of files?
+
+    Fill in your answer here
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    Fill in your answer here
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    Fill in your answer here
+
+
+
+
+============
+
+(1)
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+Using diff showed me the differences between two files - quickly going through all of the text in the file then just showing me what had changed. I didn't know that you could use Diff by iteslf at the command prompt to find the difference between files. I found it helpful to list out the different git diff commands: 
+
+git diff sha sha
+
+git diff
+with no args
+shows difference between working directory / staging area
+shows changes you�ve made since committing
+
+git diff --staged
+shows changes between staging area and repository (most recent commit)
+
+git reset
+removes things from staging index
+
+git reset --hard
+USE WITH CAUTION
+discards any changes in the working directory and/or staging area
+
+
+
+(2)
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+Having full history to the entire history of a file would allow mistakes to be undone. It would also be a good backup. This allows security and portability - security to try things because they can always be undone; security because you have a copy of your files somewhere else in addition to on your own computer; and portability because you will always have access to your files if you have a computer with internet connection.
+
+(3)
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+PROS of manually choosing when to create a commit - you can group your commits logically; you can choose at what points to commit
+CONS of manually choosing when to create a commit - you have to remember to commit
+
+(4)
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+Different VCS are used for different purposes. Google docs just needs to track unrelated files. You don't want to have certain commit points rollback changes on multiple files because the files are unrelated; aren't interconnected. You just want to change / roll-back one file. Or, if you want to do more than one, you can do each individually. Git allows you to track interconnected files. This allows you to group inter-related changes. Programming files are interconnected. A change can impact several files. When you commit a change impacting several files, if you ever want to rollback, when you do so, you're changing all of the impacted files at once.
+
+(5)
+How can you use the commands git log and git diff to view the history of files?
+git log shows you a log of all commits
+you can then compare two commits using git diff sha sha
+for instance, i could compare one commit with the previous commit to see what changed from the previous one to the next one
+
+(6)
+How might using version control make you more confident to make changes that could break something?
+If you break something, you can always use git checkout <SHA> to go back to a previous working version
+
+(7)
+Now that you have your workspace set up, what do you want to try using Git for?
+keep track of everything - this course, other courses, notes. Check it out:
+https://github.com/GoesToEleven
